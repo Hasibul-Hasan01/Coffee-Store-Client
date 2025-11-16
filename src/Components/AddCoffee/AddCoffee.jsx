@@ -12,8 +12,9 @@ const AddCoffee = () => {
         const qty = e.target.qty.value;
         const price = e.target.price.value;
         const details = e.target.details.value;
+        const photo = e.target.photo.value;
 
-        const newCoffee = { name, supplier, category, qty, price, details }
+        const newCoffee = { name, supplier, category, qty, price, details, photo }
         console.log(newCoffee);
 
         fetch(`http://localhost:3000/coffees`, {

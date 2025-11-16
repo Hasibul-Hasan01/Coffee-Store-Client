@@ -1,4 +1,5 @@
 import { useLoaderData } from 'react-router';
+import CoffeeCards from '../../Components/CoffeeCards/CoffeeCards';
 
 const Home = () => {
     const coffees = useLoaderData();
@@ -6,6 +7,7 @@ const Home = () => {
     return (
         <div>
             <h1>This Is home page.</h1>
+            <CoffeeCards coffees={coffees} />
         </div>
     );
 };
