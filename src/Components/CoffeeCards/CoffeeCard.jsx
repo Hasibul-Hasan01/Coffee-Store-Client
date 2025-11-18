@@ -1,6 +1,7 @@
 import { FaEye } from "react-icons/fa";
 import { FaPencil } from "react-icons/fa6";
 import { RiDeleteBin5Fill } from "react-icons/ri";
+import { Link } from "react-router";
 import Swal from "sweetalert2";
 
 
@@ -52,8 +53,8 @@ const CoffeeCard = ({ coffee }) => {
                     <h1>Price : {price}</h1>
                 </div>
                 <div className='col-span-1 col-start-7 my-auto block'>
-                    <button className="btn mb-2"><FaEye /></button><br />
-                    <button className="btn mb-2"><FaPencil /></button><br />
+                    <Link to={`/coffees/${_id}`}><button className="btn mb-2"><FaEye /></button><br /></Link>
+                    <Link to={`/update-coffee/${_id}`}><button className="btn mb-2"><FaPencil /></button><br /></Link>
                     <button className="btn" onClick={() => handleDelete(_id)}><RiDeleteBin5Fill /></button><br />
                 </div>
             </div>
@@ -62,3 +63,5 @@ const CoffeeCard = ({ coffee }) => {
 };
 
 export default CoffeeCard;
+
+
