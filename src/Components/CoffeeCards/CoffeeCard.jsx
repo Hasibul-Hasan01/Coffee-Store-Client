@@ -56,7 +56,7 @@ const CoffeeCard = ({ coffee, coffees, setCoffees }) => {
                     <h1>Price : {price}</h1>
                 </div>
                 <div className='col-span-1 col-start-7 my-auto block'>
-                    <Link to={`/coffees/${_id}`}><button className="btn mb-2"><FaEye /></button><br /></Link>
+                    <Link to={`/coffee-details/${_id}`}><button className="btn mb-2"><FaEye /></button><br /></Link>
                     <Link to={`/update-coffee/${_id}`}><button className="btn mb-2"><FaPencil /></button><br /></Link>
                     <button className="btn" onClick={() => handleDelete(_id)}><RiDeleteBin5Fill /></button><br />
                 </div>
