@@ -1,7 +1,7 @@
 import React from 'react';
 import CoffeeCard from './CoffeeCard';
 
-const CoffeeCards = ({ coffees }) => {
+const CoffeeCards = ({ coffees, setCoffees }) => {
     return (
         <div className='px-30'>
             <section className='text-center'>
@@ -11,7 +11,7 @@ const CoffeeCards = ({ coffees }) => {
             </section>
             <section className='grid grid-cols-2 gap-5'>
                 {
-                    coffees.map(coffee => <CoffeeCard key={coffee._id} coffee={coffee} />)
+                    coffees.map(coffee => <CoffeeCard key={coffee._id} coffee={coffee} coffees={coffees} setCoffees={setCoffees} />)
                 }
             </section>
 
